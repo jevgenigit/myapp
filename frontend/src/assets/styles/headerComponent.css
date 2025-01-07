@@ -1,0 +1,65 @@
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008835;
+    padding: 0.5% 1%;
+    border-bottom: 10px solid white;
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    background-color: #008835;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 100%;
+  }
+  
+  .btn:hover {
+    background-color: #007e30;
+  }
+  
+  .btn.active {
+    background-color: #016528;
+  }
+  
+  .lang-buttons {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .logo-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .logo-button img {
+    height: 29px;
+    margin-top: 3%;
+  }
+  
+  .center-buttons {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
