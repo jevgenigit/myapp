@@ -1,6 +1,9 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.14"
+  },
+  "scripts": {
+    "dev": "npm --prefix ./frontend run dev"
   }
 
 }
