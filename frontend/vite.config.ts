@@ -9,8 +9,8 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-	base:"/myapp"
   ],
+  base: "/myapp",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
