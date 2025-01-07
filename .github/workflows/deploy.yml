@@ -36,9 +36,14 @@ jobs:
           node-version: 20
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run:  | 
+        #npm ci  
+          cd frontend  # Navigate to the subfolder where Vite is located
+          npm install   # Install dependencies for the Vite project
       - name: Build
-        run: npm run dev
+        run: |
+          cd frontend  # Again, make sure you're in the right folder
+           npm run dev
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
