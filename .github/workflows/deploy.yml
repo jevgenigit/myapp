@@ -30,27 +30,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
+
       - name: Install dependencies
-        run:  | 
-        #npm ci  
+        run: |
           cd frontend  # Navigate to the subfolder where Vite is located
-          npm install   # Install dependencies for the Vite project
+          npm install  # Install dependencies for the Vite project
+
       - name: Build
         run: |
-          cd frontend  # Again, make sure you're in the right folder
-           npm run dev
+          cd frontend  # Navigate to the frontend folder again
+          npm run build  # Use npm run build for production build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload dist folder
-          path: './dist'
+          path: './frontend/dist'  # Ensure you're uploading the correct 'dist' folder
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
