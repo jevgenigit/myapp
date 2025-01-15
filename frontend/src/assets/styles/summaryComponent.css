@@ -59,8 +59,7 @@
   }
   
   .bottom-section-container.transparent {
-    background-color: rgb(246, 247, 250);
-    opacity: 1;
+    opacity: 0;
   }
   
   .bottom-section-container .message {

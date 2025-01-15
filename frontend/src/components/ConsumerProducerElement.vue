@@ -11,6 +11,9 @@
         :step="element.stepIncrement"
         v-model="element.currentOutput"
         :image="element.image"
+        @update:minNr="(value) => elementStore.updateElementMinValue(element.name, value, true)"
+        @update:maxNr="(value) => elementStore.updateElementMaxValue(element.name, value, true)"
+        @update:step="(value) => elementStore.updateElementStepIncrement(element.name, value, true)"
       />
     </div>
     <div v-if="section === 'consumers'" class="elements-container">
@@ -24,6 +27,9 @@
         :step="element.stepIncrement"
         v-model="element.currentConsumption"
         :image="element.image"
+        @update:minNr="(value) => elementStore.updateElementMinValue(element.name, value, false)"
+        @update:maxNr="(value) => elementStore.updateElementMaxValue(element.name, value, false)"
+        @update:step="(value) => elementStore.updateElementStepIncrement(element.name, value, false)"
       />
     </div>
   </div>
@@ -35,21 +41,21 @@ import { useElementStore } from "@/stores/elements";
 import Element from "@/components/Element.vue";
 
 const props = defineProps({
-    section: {
-      type: String,
+  section: {
+    type: String,
       name: String,
       image: String,
-      required: true,
-    },
-  });
+    required: true,
+  },
+});
 
-  const elementStore = useElementStore();
+const elementStore = useElementStore();
 
-  const filteredProducers = computed (() =>
+const filteredProducers = computed (() =>
   elementStore.elements.filter((el) => el.isProducer)
-  );
+);
 
-  const filteredConsumers = computed (() =>
+const filteredConsumers = computed (() =>
   elementStore.elements.filter((el) => !el.isProducer)
-  );
+);
 </script>

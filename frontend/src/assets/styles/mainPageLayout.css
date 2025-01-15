@@ -1,26 +1,32 @@
 .all {
   margin-top: 3%;
   display: grid;
-  grid-template-columns: 0.4fr 1fr;
-  grid-template-rows: 0.15fr 0.42fr 0.42fr;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 0.15fr 1fr;
   grid-template-areas: 
-    "frequencyDisplay frequencyDisplay"
+    "weatherDisplay frequencyDisplay"
     "summaryDisplay consumerProducerElementProducers"
     "summaryDisplay consumerProducerElementConsumers";
   height: 93vh;
   width: 100%;
-  column-gap: 1%;
   row-gap: 1.2%;
   font-family: 'Aptos', sans-serif;
   overflow: hidden;
+  transition: background-color var(--transition-duration) ease;
   background-color: rgb(246, 247, 250);
+}
+
+.weatherDisplay {
+  grid-area: weatherDisplay;
 }
 
 .frequencyDisplay {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   grid-area: frequencyDisplay;
+  background-color: white;
+  padding-left: 10%;
 }
 
 .summaryDisplay {
@@ -34,8 +40,10 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  overflow-x:auto;
-  overflow-y:hidden ;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-left: 1%;
+
 }
 
 .consumerProducerElementProducers {
@@ -46,4 +54,10 @@
   grid-area: consumerProducerElementConsumers;
 }
 
+:root {
+    --transition-duration: 2s;
+}
 
+* {
+  margin: 0;
+}

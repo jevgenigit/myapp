@@ -62,4 +62,28 @@
     align-items: center;
     margin-left: 20px;
   }
+
+  .timer {
+    font-size: 1.3rem;
+    font-family: 'Aptos', sans-serif;
+    color: rgb(255, 255, 255); 
+    position: absolute;
+    left: 50%;
+    font-weight: bold; 
+    transform: translateX(-50%);
+    animation: colorTransition 1s ease-in-out infinite; 
+  }
+  
+  @keyframes colorTransition {
+    0% {
+      color: rgb(255, 255, 255); 
+    }
+    80% {
+      color: rgba(255, 255, 255, 0.445);
+    }
+    100% {
+      color: rgb(255, 255, 255);
+    }
+  }
+  
   

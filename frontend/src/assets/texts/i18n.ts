@@ -27,7 +27,10 @@ const messages = {
     editGame: 'Edit game',
     restartGame: 'Restart game',
     current: 'Current',
-    mw: 'MW',
+    mw: 'MW',    
+    max: 'Max:',    
+    min: 'Min:',
+    step: 'Step:',
 
     'Wind park': 'Wind park',
     'Solar park': 'Solar park',
@@ -43,6 +46,12 @@ const messages = {
     MakeProductionSmaller: 'Reduce production',
     MakeConsumptionBigger: 'Increase consumption',
     MakeConsumptionSmaller: 'Reduce consumption',
+    blackoutInSeconds: 'Blackout in {countdown} seconds!',
+    blackoutHeader: 'Blackout',
+    blackoutText: 'Power outage occurred, network frequency went outside the acceptable range.', 
+    blackoutStartOver: 'Start over',
+    windStrength: 'Wind speed',
+    solarStrength: 'Solar intensity',
   },
   et: {
     infoText:
@@ -71,6 +80,9 @@ const messages = {
     restartGame: 'Alusta uuesti',
     current: 'Hetkel',
     mw: 'MW',
+    max: 'Max:',
+    min: 'Min:',
+    step: 'Samm:',
 
     'Wind park': 'Tuulepark',
     'Solar park': 'Päikesepark',
@@ -86,6 +98,12 @@ const messages = {
     MakeProductionSmaller: 'Vähendage tootmist',
     MakeConsumptionBigger: 'Suurendage tarbimist',
     MakeConsumptionSmaller: 'Vähendage tarbimist',
+    blackoutInSeconds: 'Elektrikatkestus {countdown} sekundi pärast!',
+    blackoutHeader: 'Elektrikatkestus',
+    blackoutText: 'Tekkis elektrikatkestus, võrgu sagedus läks väljapoole vahemikku.',
+    blackoutStartOver: 'Alusta uuesti',
+    windStrength: 'Tuule tugevus',
+    solarStrength: 'Päikese tugevus',
   },
   ru: {
     infoText:
@@ -114,6 +132,9 @@ const messages = {
     restartGame: 'Перезапустить игру',
     current: 'Текущий',
     mw: 'МВт',
+    max: 'Макс:',
+    min: 'Мин:',
+    step: 'Шаг:',
     'Wind park': 'Ветропарк',
     'Solar park': 'Солнечная электростанция',
     'Households': 'Домохозяйства',
@@ -128,6 +149,12 @@ const messages = {
     MakeProductionSmaller: 'Уменьшить производство',
     MakeConsumptionBigger: 'Увеличить потребление',
     MakeConsumptionSmaller: 'Уменьшить потребление',
+    blackoutInSeconds: 'Отключение через {countdown} секунд!',
+    blackoutHeader: 'Отключение',
+    blackoutText: 'Произошло отключение электроэнергии, частота сети вышла за пределы допустимого диапазона.',
+    blackoutStartOver: 'Начать заново',
+    windStrength: 'Сила ветра',
+    solarStrength: 'Солнечная энергия',
   }
 };
 
