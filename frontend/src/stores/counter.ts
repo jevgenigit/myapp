@@ -7,7 +7,7 @@ export const useCounterStore = defineStore('counter', () => {
   function increment() {
     count.value++
   }
-  let intervalId: number | null = null; 
+  let intervalId: ReturnType<typeof setInterval> | null = null;
   
   onMounted(() => {
     intervalId = setInterval(() => {
