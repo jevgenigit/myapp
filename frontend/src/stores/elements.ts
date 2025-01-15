@@ -69,12 +69,12 @@ export const useElementStore = defineStore('element', () => {
     },
   ]);
  
-  function getMaxOutput(elementId) {
+  function getMaxOutput(elementId: number) {
     const element = elements.value.find((el) => el.id === elementId);
     return element ? element.maxOutput : null;
   }
  
-  function getMinOutput(elementId) {
+  function getMinOutput(elementId: number) {
     const element = elements.value.find((el) => el.id === elementId);
     return element ? element.minOutput : null;
   }
@@ -88,7 +88,7 @@ export const useElementStore = defineStore('element', () => {
           : element.maxOutput) || element.maxOutput;
  
       if (isProduction) {
-        element.currentOutput = Math.min(newValue, maxLimit);
+        element.currentOutput = Math.min(newValue , maxLimit ?? 0);
       }
     }
   };
@@ -96,7 +96,7 @@ export const useElementStore = defineStore('element', () => {
   const updateElementMaxOutput = (elementName: string, newMaxOutput: number) => {
     const element = elements.value.find((el) => el.name === elementName);
     if (element && (element.type === "windpark" || element.type === "solarpark")) {
-      element.currentMaxOutput = Math.min(newMaxOutput, element.maxOutput);
+      element.currentMaxOutput = Math.min(newMaxOutput, element.maxOutput ?? 0);
     } else if (element) {
       element.currentMaxOutput = element.maxOutput;
     }
